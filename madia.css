@@ -1,0 +1,14 @@
+@media screen and (max-width : 1090px) {
+    .boxContainer {
+        flex-direction: column;
+        height: 1000px;
+    }
+
+    .songcontainer {
+        flex-wrap: wrap;
+    }
+
+    .songboxs {
+        width: 100%;
+    }
+}

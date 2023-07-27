@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="madia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>music</title>
+</head>
+
+<body>
+    <nav id="nav">
+        <div class="nav-shadow">
+            <ul>
+                <li class="nav-home">
+                    <a href=""><img class="logo" src="logo.jpeg" alt="img"></a>
+                    <a href="">Home</a>
+                </li>
+                <li id="nav-music">
+                    <i class="fa-solid fa-music"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="mainbar">
+        <div class="boxContainer">
+            <div id="box1" class="containBox boxhover">
+                <h3 class="colors">Long Drive Bollywood MIx - Arijit Singh</h3>
+                <span>Album <b>.</b> Arijit Singh</span>
+            </div>
+            <div id="box2" class="containBox boxhover">
+                <h3>Bollywood Hits Songs</h3>
+                <span>Album <b>.</b> Sachin-Jiger</span>
+            </div>
+            <div id="box3" class="containBox boxhover">
+                <h3>vur yüreğim✘gangsta's paradise⛓</h3>
+                <span>Mix - vur yüreğim✘gangsta's paradise⛓</span>
+            </div>
+            <div id="box4" class="containBox boxhover">
+                <h3>Boll Tujhse (Lofi Flip)</h3>
+                <span>Single <b>.</b> Amit Trivets, Ashes Kaur, Abhijeet Srivadtava</span>
+            </div>
+            <div id="box5" class="containBox boxhover">
+                <h3>All Song</h3>
+            </div>
+        </div>
+        <div class="songcontainer">
+            <div class="songboxs">
+                <div class="songlisthading">
+                    <h3>Long Drive Bollywood MIx - Arijit Singh</h3>
+                    <span>View All</span>
+                </div>
+                <div class="songbox-list" id="songbox1">
+                    <!--! song list will be added dynamically -->
+                </div>
+            </div>
+            <div class="songboxs">
+                <div class="songlisthading">
+                    <h3>Bollywood Hits Songs - Sachin - Jiger</h3>
+                    <span>View All</span>
+                </div>
+
+                <div class="songbox-list" id="songbox2">
+                    <!--! song list will be added dynamically -->
+                </div>
+            </div>
+            <div class="songboxs">
+                <div class="songlisthading">
+                    <h3>vur yüreğim✘gangsta's paradise⛓</h3>
+                    <span>View All</span>
+                </div>
+
+                <div class="songbox-list" id="songbox3">
+                    <!--! song list will be added dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <div class="songbar popup" id="songBar">
+            <div class="player">
+                <div class="wrapper">
+                    <div class="details">
+                        <div class="new-playing">PLAYING</div>
+                        <div class="track-art"> <img src="songs/Arijitimg/Chhod Diya.jpg" alt="img" id="img"></div>
+                        <div class="track-name" id="songName">CVRTOON - İzmir Marşı</div>
+                        <audio src="songs/ArijitSong/Chhod Diya (Lyrics).mp3"></audio>
+                    </div>
+                    <div class="control">
+                        <input type="range" min="0" max="100" value="0" name="range" class="song_slider" id="progressBar">
+                    </div>
+
+                    <div class="control-bar">
+                        <i class="fa-solid fa-backward-step" id="backward"></i>
+                        <i class="fa-solid fa-play fa-xl" id="play"></i>
+                        <i class="fa-solid fa-forward-step" id="forward"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="box.js"></script>
+</body>
+
+</html>
