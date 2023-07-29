@@ -12,3 +12,28 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width : 400px) {
+    .songbar {
+        width: 100%;
+        height: calc(100% - 50px);
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    span {
+        font-size: 15px;
+    }
+
+    .new-playing {
+        position: relative;
+        top: 0px;
+        left: 30%;
+    }
+
+    .songslistbar p{
+        font-size: 11x;
+    }
+}

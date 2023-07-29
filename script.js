@@ -129,6 +129,8 @@ for (let i = 0; i < 5; i++) {
     allsong[j++] = lofi[i];
 }
 
+
+
 const music = document.querySelector("audio");
 const play = document.getElementById("play");
 const backward = document.getElementById("backward");
@@ -141,6 +143,7 @@ const songBar = document.getElementById("songBar");
 const songbox1 = document.getElementById("songbox1");
 const songbox2 = document.getElementById("songbox2");
 const songbox3 = document.getElementById("songbox3");
+const songslistbar = document.getElementsByClassName("songslistbar");
 
 const box1 = document.getElementById("box1");
 const box2 = document.getElementById("box2");
@@ -151,22 +154,38 @@ const box5 = document.getElementById("box5");
 let isPlay = false;
 let songIndex = 0;
 let songList = allsong;
+let tracks = [];
+let isPlays = false;
+let tampSongListBar;
+
+
+let innerHtml1 = "";
+let innerHtml2 = "";
+let innerHtml3 = "";
+
+
 
 //! music play and pause
 const playSong = () => {
     isPlay = true;
     music.play();
-    play.classList.replace("fa-play", "fa-pause");
+    // play.classList.replace("fa-play", "fa-pause");
+    play.src = "icons/pause.svg";
     img.classList.add("rotted");
     navmusic.classList.add("rotted");
+    tampSongListBar.lastElementChild.src = "icons/play-min.svg";
+    console.log(tampSongListBar.lastElementChild);
 };
 
 const pauseSong = () => {
     isPlay = false;
     music.pause();
-    play.classList.replace("fa-pause", "fa-play");
+    // play.classList.replace("fa-pause", "fa-play");
+    play.src = "icons/play.svg";
     img.classList.remove("rotted");
     navmusic.classList.remove("rotted");
+    tampSongListBar.lastElementChild.src = "icons/pause-min.svg";
+    console.log(tampSongListBar);
 };
 
 play.addEventListener("click", () => {
@@ -273,17 +292,13 @@ box5.addEventListener("click", () => {
 
 // ! add song list in bottom box
 
-let innerHtml1 = "";
-let innerHtml2 = "";
-let innerHtml3 = "";
-
 for (let i = 0; i < 5; i++) {
     innerHtml1 +=
         `
             <div class="songslistbar">
                 <img src="${arijit[i].img}"/>
                 <p><a href="#">${arijit[i].name}</a></p>
-                <i class="fa-solid fa-play fa-2xs" ></i>
+                <img src="icons/play-min.svg">
             </div>
         `
 }
@@ -296,7 +311,7 @@ for (let i = 0; i < 5; i++) {
             <div class="songslistbar">
                 <img src="${Bollywood[i].img}"/>
                 <p><a href="#">${Bollywood[i].name}</a></p>
-                <i class="fa-solid fa-play fa-2xs"></i>
+                <img src="icons/play-min.svg">
             </div>
         `
 }
@@ -309,7 +324,7 @@ for (let i = 0; i < 5; i++) {
             <div class="songslistbar">
                 <img src="${mysong[i].img}"/>
                 <p><a href="#">${mysong[i].name}</a></p>
-                <i class="fa-solid fa-play fa-2xs"></i>
+                <img src="icons/play-min.svg">
             </div>
         `
 }
@@ -318,16 +333,11 @@ songbox3.innerHTML = innerHtml3
 
 // ! song list bar
 
-const songslistbar = document.getElementsByClassName("songslistbar")
-let tracks = [];
-let isPlays = false;
-
 for (let i = 0; i < songslistbar.length; i++) {
-
-    songslistbar[i].addEventListener("click", () => {
+    tampSongListBar = songslistbar[i];
+     songslistbar[i].addEventListener("click", () => {
         if (tracks.length > 0) {
-            tracks[0].classList.remove("fa-pause");
-            tracks[0].classList.add("fa-play");
+            tracks[0].src = "icons/play-min.svg";
         }
 
         if (isPlays && songslistbar[i] == isPlays) {
@@ -337,8 +347,7 @@ for (let i = 0; i < songslistbar.length; i++) {
             songIndex = i;
             loadSong(songIndex);
             playSong();
-            songslistbar[i].lastElementChild.classList.remove("fa-play");
-            songslistbar[i].lastElementChild.classList.add("fa-pause");
+            songslistbar[i].lastElementChild.src = "icons/pause-min.svg";
             tracks[0] = songslistbar[i].lastElementChild;
 
             console.log(tracks[0]);

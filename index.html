@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="madia.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <title>music</title>
 </head>
 
@@ -21,7 +21,7 @@
                     <a href="">Home</a>
                 </li>
                 <li id="nav-music">
-                    <i class="fa-solid fa-music"></i>
+                    <img src="icons/music.svg" alt="" width="30px" height="20px">
                 </li>
             </ul>
         </div>
@@ -49,6 +49,7 @@
                 <h3>All Song</h3>
             </div>
         </div>
+        
         <div class="songcontainer">
             <div class="songboxs">
                 <div class="songlisthading">
@@ -60,7 +61,7 @@
                 </div>
             </div>
             <div class="songboxs">
-                <div class="songlisthading">
+                <div class="songlisthading sbox2">
                     <h3>Bollywood Hits Songs - Sachin - Jiger</h3>
                     <span>View All</span>
                 </div>
@@ -70,7 +71,7 @@
                 </div>
             </div>
             <div class="songboxs">
-                <div class="songlisthading">
+                <div class="songlisthading sbox3">
                     <h3>vur yüreğim✘gangsta's paradise⛓</h3>
                     <span>View All</span>
                 </div>
@@ -81,11 +82,11 @@
             </div>
         </div>
 
-        <div class="songbar popup" id="songBar">
+        <div class="songbar" id="songBar">
             <div class="player">
                 <div class="wrapper">
                     <div class="details">
-                        <div class="new-playing">PLAYING</div>
+                        <div class="new-playing"><span id="PLAYING">PLAYING</span></div>
                         <div class="track-art"> <img src="songs/Arijitimg/Chhod Diya.jpg" alt="img" id="img"></div>
                         <div class="track-name" id="songName">CVRTOON - İzmir Marşı</div>
                         <audio src="songs/ArijitSong/Chhod Diya (Lyrics).mp3"></audio>
@@ -95,17 +96,17 @@
                     </div>
 
                     <div class="control-bar">
-                        <i class="fa-solid fa-backward-step" id="backward"></i>
-                        <i class="fa-solid fa-play fa-xl" id="play"></i>
-                        <i class="fa-solid fa-forward-step" id="forward"></i>
+                        <img src="icons/backward.svg" alt="svg" id="backward" width="30px" height="30px">
+                        <img src="icons/play.svg" alt="" id="play" width="30px" height="30px">
+                        <img src="icons/forward.svg" alt="" id="forward" width="30px" height="30px">
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
-    <script src="script.js"></script>
-    <script src="box.js"></script>
+    <!-- <script src="songs.js"  type="module"></script> -->
+    <script src="script.js"  type="module"></script>
+    <script src="box.js" type="module"></script>
 </body>
 
 </html>

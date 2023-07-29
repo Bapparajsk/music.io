@@ -67,6 +67,7 @@
         "songcontainer",
         "songlisthading",
         "songslistbar",
+        "sourcery",
         "Srivadtava",
         "sudh",
         "Tera",
@@ -79,5 +80,6 @@
         "yüreğim",
         "Отключаю",
         "телефон"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
