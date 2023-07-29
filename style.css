@@ -246,6 +246,7 @@ a {
     border-radius: 10px;
     box-shadow: 0 0 20px 0 rgba(159, 0, 238, 0.7);
     transition: all 0.5s ease;
+<<<<<<< HEAD
     /* cursor: pointer; */
 }
 
@@ -268,6 +269,8 @@ a {
             #A2FF86,
             #164B60,
             #4FC0D0);
+=======
+>>>>>>> 0166371afc584abf6b838747a0f7854631f554a4
 }
 
 .songlisthading {
