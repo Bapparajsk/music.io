@@ -13,7 +13,7 @@
     }
 }
 
-@media screen and (max-width : 400px) {
+@media screen and (max-width : 430px) {
     .songbar {
         width: 100%;
         height: calc(100% - 50px);
