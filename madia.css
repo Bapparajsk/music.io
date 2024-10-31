@@ -1,8 +1,4 @@
 @media screen and (max-width : 1090px) {
-    .boxContainer {
-        flex-direction: column;
-        height: 1000px;
-    }
 
     .songcontainer {
         flex-wrap: wrap;
@@ -11,9 +7,22 @@
     .songboxs {
         width: 100%;
     }
+    #mainbar {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width : 520px) {
+    .boxContainer {
+        display: none;
+    }
+    #mainbar {
+        margin-top: 0px;
+    }
 }
 
 @media screen and (max-width : 430px) {
+    
     .songbar {
         width: 100%;
         height: calc(100% - 50px);
